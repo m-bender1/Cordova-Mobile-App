@@ -1,0 +1,72 @@
+<!--
+    Matt Bender 
+    Mobile Dev. Final Project
+    Dec 6, 2020
+-->
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <title>Project - Index</title>
+    <link rel="stylesheet" href="css/project_styles.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="register">
+            <h1>Register!</h1>
+            <div>
+                <input type="email" id="register-email" placeholder="email">
+                <br />
+                <input type="password" id="register-password" placeholder="password">
+                <br />
+                <button id="register-button" onclick="registerInFirebase();">Register</button>
+            </div>
+        </div>
+
+        <div id="login">
+            <h1>Login!</h1>
+            <div>
+                <input type="email" id="login-email" placeholder="email">
+                <br />
+                <input type="password" id="login-password" placeholder="password">
+                <br />
+                <button id="login-button" onclick="loginWithFirebase();">Login</button>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDpEm7uozYZG__ofhCMig9QU6GzoR3XGRE",
+            authDomain: "phonegap-project-15552.firebaseapp.com",
+            projectId: "phonegap-project-15552",
+            storageBucket: "phonegap-project-15552.appspot.com",
+            messagingSenderId: "1002298090320",
+            appId: "1:1002298090320:web:ed464108dcc17b4cb54255"
+        };
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

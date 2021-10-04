@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <title>Project - Update</title>
+    <link rel="stylesheet" href="css/project_styles.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="update-profile">
+            <div id="profileForm">
+                <label>First Name:</label><br>
+                <input type="text" id="first-name" placeholder="John"><br>
+                <label>Last Name:</label><br>
+                <input type="text" id="last-name" placeholder="Doe"><br>
+                <label>Birthday:</label><br>
+                <input type="text" id="birthday" placeholder="yyyy-mm-dd"><br>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">Male</input>
+                <input type="radio" id="female" name="gender" value="female">Female</input>
+            </div>
+            <button id="update-profile-btn" onclick="updateProfile();">Update Profile</button>
+            <button id="signout-button" onclick="signoutWithFirebase();">Sign Out</button>
+        </div>
+
+        <div id="display-profile">
+            <h2>Profile: </h2>
+            <div id="display-output"></div>
+            <div id="location-output"></div>
+            <!-- <button id="get-location">Get Location</button> -->
+            <button id="backBtn" onclick="backToEdit()">Back</button>
+            <button id="signout-button" onclick="signoutWithFirebase()">Sign Out</button>
+        </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDpEm7uozYZG__ofhCMig9QU6GzoR3XGRE",
+            authDomain: "phonegap-project-15552.firebaseapp.com",
+            projectId: "phonegap-project-15552",
+            storageBucket: "phonegap-project-15552.appspot.com",
+            messagingSenderId: "1002298090320",
+            appId: "1:1002298090320:web:ed464108dcc17b4cb54255"
+        };
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

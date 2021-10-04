@@ -1,0 +1,66 @@
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(58, 61, 58);
+}
+
+h1 {
+    color: white;
+}
+
+
+/* index.html */
+
+#register,
+#login {
+    margin: 10px;
+    padding: 10px;
+}
+
+#register button,
+#login button {
+    margin-top: 5px;
+}
+
+
+/* both pages wrapper */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+
+/* both pages text boxes */
+
+.wrapper input {
+    background-color: rgb(81, 83, 81);
+    border: thin solid white;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+/* all buttons */
+
+button {
+    background: rgb(3, 58, 3);
+    color: white;
+    border: thin solid white;
+    padding: 5px;
+}
+
+#update-profile-btn,
+#signout-button {
+    margin-top: 5px;
+}
+
+#update-profile,
+#display-profile {
+    color: white;
+    align-self: center;
+}
